@@ -1,0 +1,29 @@
+.div{ 
+    background: url("../../../../pokemon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+    overflow: hidden;
+}
+
+.h1{
+    align-self: flex-start;
+    color: white;
+}
+.button{
+    margin-top: 4px; /* Espacio entre el h1 y el botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade esquinas redondeadas al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: black;
+    align-self: flex-start;
+
+}
