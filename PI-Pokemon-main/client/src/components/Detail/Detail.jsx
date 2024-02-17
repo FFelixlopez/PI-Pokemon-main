@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Detail.module.css"
+import {Link} from"react-router-dom";
 
 
 
@@ -24,7 +25,8 @@ const Detail = () => {
         return fetchData({});
       }, [id]);
     return (
-        <div className={styles.container}>
+        <div className={styles.container}>          
+            <div  ><Link to="/home"><button className={styles.button}  >Home</button></Link></div>
             <div className={styles.divCard}>
                 <h2 className="cradInfo">ID:{pokemons.id && pokemons.id}</h2>
                 <h2 className="cradInfo">Name : {pokemons.name && pokemons.name}</h2>
@@ -32,9 +34,10 @@ const Detail = () => {
                 <h2 className="cradInfo">Life:{pokemons.life && pokemons.life}</h2>
                 <h2 className="cradInfo">Attack : {pokemons.attack && pokemons.attack}</h2>
                 <h2 className="cradInfo">Defence : {pokemons.defence && pokemons.defence}</h2>{/* condicional = (&&) se utiliza cuando react se pone pechicoso */}
-                <h2 className="cradInfo">Type: {pokemons.type && pokemons.type }</h2>{/* condicional chaime =(?) se utiliza cuando tien mas de una propiedad  */}             
+                <h2 className="cradInfo">Type: {pokemons.type && pokemons.type ? pokemons.type.join(", ") : "" }</h2>{/* condicional chaime =(?) se utiliza cuando tien mas de una propiedad  */}             
                        
             </div>
+            
         </div>
 
     );

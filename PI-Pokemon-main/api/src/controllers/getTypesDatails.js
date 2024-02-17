@@ -7,7 +7,7 @@ const getPokemonTypesFromAPI = async () => {
       const response = await axios.get("https://pokeapi.co/api/v2/type/");
       return response.data.results.map(type => ({
         name: type.name,
-        url: type.url
+        
       }));
     } catch (error) {
       throw new Error('Error al obtener tipos de Pokémon desde la API');

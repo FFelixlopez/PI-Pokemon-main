@@ -1,29 +1,37 @@
-.div{ 
-    background: url("../../../../pokemon.png");
+
+.div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;    
+    background: url("../../../../pokemon-1.png");
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: black;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction:row;
     overflow: hidden;
-}
-
-.h1{
-    align-self: flex-start;
-    color: white;
-}
-.button{
-    margin-top: 4px; /* Espacio entre el h1 y el botón */
-    color: white; /* Color del texto del botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border: none; /* Elimina el borde del botón */
-    border-radius: 5px; /* Añade esquinas redondeadas al botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     background-color: black;
-    align-self: flex-start;
+}
 
+.h1 {
+    color: rgb(6, 6, 6);
+}
+
+
+.button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 20PX;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }

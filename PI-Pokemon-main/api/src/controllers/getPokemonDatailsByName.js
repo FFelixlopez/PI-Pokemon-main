@@ -12,7 +12,7 @@ const getPokemonDetailsByName = async (req, res) => {
         const pokemonsFromDatabase = await Pokemons.findAll({
             where: {
                 name: {
-                    [Op.iLike]: `%${name}`
+                    [Op.iLike]: `%${name}%`
                 }
             },
             include: [{ model: Type, through: 'Type_Pokemon' }]

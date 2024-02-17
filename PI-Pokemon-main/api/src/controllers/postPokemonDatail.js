@@ -2,16 +2,16 @@ const { Pokemons, Type } = require('../db');
 
 const postPokemonDatail = async (req, res) => {
     try {
-        const { name,  life, image,  attack, defence, type } = req.body;
+        const { name, life, image, attack, defence, type } = req.body;
 
-        if (!type || type.length === 1) {
+        if (!type || type.length === 0) {
             return res.status(400).json({ error: "Debe proporcionar al menos un typo." });
         }
 
         const newPokemon = await Pokemons.create({
-            name,            
-            life,
+            name,
             image,
+            life,            
             attack,
             defence,            
         });

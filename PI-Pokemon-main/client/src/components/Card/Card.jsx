@@ -17,7 +17,7 @@ export default function Card({
             <div className={styles.divCard}>            
                 <h2 className="cradInfo">ID: {id}</h2> 
                 <h2 className="cradInfo">Name: {name}</h2>                
-                <img src={image} alt={name} />
+                <img className={styles.img} src={image} alt={name} />
                 <h2 className="cradInfo">Life: {life}</h2>            
                 <h2 className="cradInfo">Attack: {attack}</h2>
                 <h2 className="cradInfo">Defence: {defence}</h2>
