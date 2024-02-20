@@ -15,20 +15,20 @@ const rootReducer = (state= initialState, action)=>{
                 filterPokemons: filteredPokemons,
         };
         case ORDER_CARDS:
-            const orderedCards = [...state.pokemons].sort((a, b) => {
+            const orderedCards = [...state.filterPokemons].sort((a, b) => {
                 if (action.payload === "A") return a.id - b.id;
                 if (action.payload === "D") return b.id - a.id;
                 return 0;
             })
             return {
                 ...state,
-                pokemons: orderedCards,
+                filterPokemons: orderedCards,
             }
         case SET_POKEMONS: // Define una nueva acción para establecer todos los pokemones
             return {
                 ...state,
                 pokemons: action.payload,// Establece todos los pokemones recibidos desde la URL
-
+                filterPokemons:action.payload,
             };
         default:
             return state;

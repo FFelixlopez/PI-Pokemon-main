@@ -20,6 +20,9 @@ function Navbar({onSearch}){
     const handleFilter= (event)=> {
         dispatch(filter(event.target.value));
     };
+    const handleRefresh = () => {
+        window.location.reload(); // Recarga la página
+      };
 
     const types = [
         {
@@ -127,6 +130,9 @@ function Navbar({onSearch}){
         </div >
         <div className={styles.searchBarContainer}>
             <SearchBar onSearch ={onSearch}/>
+        </div>
+        <div>
+            <button className={styles.button} onClick={handleRefresh}>home</button>
         </div>         
         </div>
     )

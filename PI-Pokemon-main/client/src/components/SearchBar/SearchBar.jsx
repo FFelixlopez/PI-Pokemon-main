@@ -9,10 +9,12 @@ export default function SearchBar({onSearch}) {
     const handleSearch = ()=>{
         onSearch(name);
     }
+
     return (
         <div>
             <input type="search"  value={name} onChange={handleChange}/>
             <button onClick={handleSearch}>Search</button>
+            
         </div>
     )
 }

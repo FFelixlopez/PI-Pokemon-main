@@ -35,8 +35,8 @@ const Form =() =>{
             });
         }
     };
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async () => {
+      
         try {
             const response = await axios.post("http://localhost:3001/pokemons", formData);
             console.log('New pokemons created:', response.data);
@@ -44,6 +44,7 @@ const Form =() =>{
             console.error('Error creating pokemons:', error);
         }
     };
+
 
     const types = [
         { id: 1, name: "normal" },
@@ -70,7 +71,7 @@ const Form =() =>{
     return (
         <div className={styles.divForm}>
             <div >
-            <div><Link to="/home"><button className={styles.button} >Home</button></Link></div>
+            <div><Link to="/home"><button className={styles.button}   >Home</button></Link></div>
             
             </div>
                      

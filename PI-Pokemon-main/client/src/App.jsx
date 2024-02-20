@@ -16,7 +16,7 @@ import { setPokemons } from "./redux/action";
 
 function App() {  
   const dispatch = useDispatch();
-  const pokemons = useSelector(state =>state.pokemons)
+  const pokemons = useSelector(state =>state.filterPokemons)
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage] =useState (12);
 
@@ -62,7 +62,7 @@ function App() {
             <Navbar onSearch ={onSearch}/>                                
                 <div className='cardsDiv'>
                   <Pagination paginate ={paginate} pokemonsPerPage={pokemonsPerPage} totalPokemos={pokemons.length} currentPage={currentPage}></Pagination>                
-                  <Cards currentPokemons={currentPokemons}></Cards>                  
+                  <Cards pokemons={currentPokemons}></Cards>                  
                 {/* <Pagination pokemonsPerPage={pokemonsPerPage} totalPokemons={pokemons.length} currentPage={currentPage1} paginate={paginate} /> */}
                 </div>  
           </Route>       

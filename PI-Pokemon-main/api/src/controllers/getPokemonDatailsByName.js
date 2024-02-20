@@ -19,7 +19,7 @@ const getPokemonDetailsByName = async (req, res) => {
         });
         console.log(pokemonsFromDatabase.toString())
         if (pokemonsFromDatabase.length > 0) {
-           // Utiliza los registros encontrados, por ejemplo, puedes devolver un array con todos los resultados
+           
             const pokemonDetailsArray = pokemonsFromDatabase.map(pokemon => {
                 const { id, name, image, life, attack, defence, Types } = pokemon;
                 const typeNames = Types.map(typ => typ.name);

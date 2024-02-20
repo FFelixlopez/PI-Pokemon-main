@@ -56,6 +56,6 @@ const getPokemonDetailsById = async (req, res) => {
 };
 
 
-
-
 module.exports = getPokemonDetailsById;
+
+

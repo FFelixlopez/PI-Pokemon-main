@@ -49,7 +49,7 @@ const {Pokemons, Type} = require("../db");
 
 const getPokemonDetails = async (req, res) => {
     try {
-        const pageSize = 200; // Traer exactamente 200 Pokémon
+        const pageSize = 50; // Traer exactamente 50 Pokémon
         const url = `https://pokeapi.co/api/v2/pokemon?limit=${pageSize}`;
         const response = await axios.get(url);
         

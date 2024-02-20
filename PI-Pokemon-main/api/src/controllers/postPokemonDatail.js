@@ -1,4 +1,5 @@
 const { Pokemons, Type } = require('../db');
+const axios = require("axios");
 
 const postPokemonDatail = async (req, res) => {
     try {
@@ -8,7 +9,7 @@ const postPokemonDatail = async (req, res) => {
             return res.status(400).json({ error: "Debe proporcionar al menos un typo." });
         }
 
-        const newPokemon = await Pokemons.create({
+        const newPokemon = await Pokemons.create({            
             name,
             image,
             life,            
@@ -23,5 +24,9 @@ const postPokemonDatail = async (req, res) => {
         return res.status(500).json({error:"Error interno del sevidor"})
     }    
 };
+
+
+
+
 
 module.exports = postPokemonDatail;
